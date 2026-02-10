@@ -240,6 +240,11 @@ def rows_to_markdown(rows: list[list[str]]) -> str:
         while len(row) < max_cols:
             row.append("")
 
+    # Escape pipe characters so markdown table renders correctly
+    for r in range(len(rows)):
+        for c in range(max_cols):
+            rows[r][c] = rows[r][c].replace("|", "\\|")
+
     # Linkify URLs in data cells (skip header row 0)
     for r in range(1, len(rows)):
         for c in range(max_cols):
