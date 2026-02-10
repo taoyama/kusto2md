@@ -27,7 +27,7 @@ A Windows utility that converts Kusto Explorer clipboard data into clean Markdow
 2. Run the script:
 
    ```powershell
-   python kusto_to_markdown.py
+   python kusto2md.py
    ```
 
 3. The Markdown is now in your clipboard — paste it wherever you need.
